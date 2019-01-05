@@ -49,6 +49,8 @@ TRAPHUP() {
 }
 
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
+alias aeps='pstorm $yadr/zsh/aliases.zsh' #alias edit
+alias aec='code $yadr/zsh/aliases.zsh'
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
@@ -82,11 +84,13 @@ alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
+alias gcom='gco master && gfm'
 alias gcp='git cp'
 alias ga='git add -A'
 alias gap='git add -p'
 alias guns='git unstage'
 alias gunc='git uncommit'
+alias guncs='gunc && guns'
 alias gm='git merge'
 alias gms='git merge --squash'
 alias gam='git amend --reset-author'
@@ -102,6 +106,7 @@ alias glg='git l'
 alias glog='git l'
 alias co='git co'
 alias gf='git fetch'
+alias gfm='git fetch && git merge'
 alias gfp='git fetch --prune'
 alias gfa='git fetch --all'
 alias gfap='git fetch --all --prune'
@@ -130,6 +135,7 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gbd='git branch -D'
 
 # Common shell functions
 alias less='less -r'
@@ -211,3 +217,33 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade && brew cleanup && brew prune && brew doctor'
+
+# User defined
+alias ssr='yarn refresh'
+alias sspr='yarn prerefresh'
+alias sslb='lerna bootstrap'
+alias ssdr='yarn prerefresh && yarn run start:dev'
+alias ssd='yarn run dev'
+alias ssdh='yarn run start:dev'
+alias ssq='yarn run qa'
+alias sss='yarn run start:watch'
+alias ssba='yarn run build-app:watch'
+alias ssbs='yarn run build-server:watch'
+alias sshot='yarn run build:hot && yarn run start:hot'
+alias sshmr='yarn run start:hmr'
+
+alias cdss='cd ~/Dev/sstk'
+alias ssg='yarn run generate'
+
+alias ssl='yarn lint'
+alias ssld='yarn lint:dev'
+alias sslw='yarn lint:watch'
+
+alias ssti='yarn test:integration'
+alias sstm='yarn test:midlevel'
+alias sstmd='yarn test:midlevel:debug'
+alias sstc='yarn test:cover:dev'
+alias sstu='yarn test:unit -- --no-cache -u' #All (default) or pass Component
+alias sstuw='yarn test:unit -- --no-cache --watch -u' #All (default) or pass Component
+alias sstuc='yarn test:unit -- --no-cache --coverage -u' #All (default) or pass Component
+alias sstucw='yarn test:unit -- --no-cache --watch --coverage -u' #Runs only diff files unless passed option
