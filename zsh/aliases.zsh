@@ -232,7 +232,7 @@ alias ssbs='yarn run build-server:watch'
 alias sshot='yarn run build:hot && yarn run start:hot'
 alias sshmr='yarn run start:hmr'
 
-alias cdss='cd ~/Dev/sstk'
+alias cdss='cd ~/code/sstk'
 alias ssg='yarn run generate'
 
 alias ssl='yarn lint'
