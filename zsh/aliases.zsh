@@ -49,6 +49,7 @@ TRAPHUP() {
 }
 
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
+alias aec='code $yadr/zsh/aliases.zsh'
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
@@ -82,11 +83,13 @@ alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
+alias gcom='gco master && gfm'
 alias gcp='git cp'
 alias ga='git add -A'
 alias gap='git add -p'
 alias guns='git unstage'
 alias gunc='git uncommit'
+alias guncs='gunc && guns'
 alias gm='git merge'
 alias gms='git merge --squash'
 alias gam='git amend --reset-author'
@@ -102,6 +105,7 @@ alias glg='git l'
 alias glog='git l'
 alias co='git co'
 alias gf='git fetch'
+alias gfm='git fetch && git merge'
 alias gfp='git fetch --prune'
 alias gfa='git fetch --all'
 alias gfap='git fetch --all --prune'
@@ -130,6 +134,7 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gbd='git branch -D'
 
 # Common shell functions
 alias less='less -r'
